@@ -7,12 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  public displayBtnLogIn = true;
-  public displayBtnLogOut = false;
+  public displayBtnLogIn;
+  public displayBtnLogOut;
+  public canConnect;
+  public displayFormLogin;
 
-  constructor() { }
+  constructor() { 
+    this.canConnect = false; 
+    this.displayBtnLogIn = true;
+    this.displayBtnLogOut = false;
+    this.displayFormLogin = true;
+  }
 
   ngOnInit(): void {
+  }
+
+  public connexionDone(){
+    this.displayBtnLogOut=true;
+    this.displayBtnLogIn = false;
+    this.displayFormLogin = false;
   }
 
 }

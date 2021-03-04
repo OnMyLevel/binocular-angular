@@ -10,14 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  public displayBtnConnexion = true;
-  public displayLoginConponent = false;
+  public displayBtnConnexion;
+  public displayLoginConponent;
   public now: Date = new Date();
 
   constructor() { 
     setInterval(() => {
       this.now = new Date();
     }, 1);
+    
+    this.displayBtnConnexion = true; 
+    this.displayLoginConponent = false;
   }
 
   ngOnInit(): void {

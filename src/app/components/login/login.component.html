@@ -1,12 +1,12 @@
 <form class="row g-3">
     <div class="col-auto">
-      <input type="password" class="form-control" id="inputPassword2" placeholder="Email">
+      <input *ngIf="displayFormLogin" type="password" class="form-control" id="inputPassword2" placeholder="Email">
     </div>
     <div class="col-auto">
-      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+      <input *ngIf="displayFormLogin" type="password" class="form-control" id="inputPassword2" placeholder="Password">
     </div>
     <div class="col-auto">
-      <button *ngIf="displayBtnLogIn" type="submit" class="btn btn-primary mb-3">Se connecter </button>
+      <button  (click) = "connexionDone()" *ngIf="displayBtnLogIn" type="submit" class="btn btn-primary mb-3"> Se connecter </button>
       <button *ngIf="displayBtnLogOut" type="submit" class="btn btn-primary mb-3">Deconnexion</button>
     </div>
   </form>
