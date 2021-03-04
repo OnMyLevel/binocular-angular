@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { environment } from '../environments/environment';
     AppComponent,
     NavBarComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
