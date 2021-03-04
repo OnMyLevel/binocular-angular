@@ -1,4 +1,6 @@
+<!-- Composant de connexion -->
 <form class="row g-3">
+  <!-- Champ pour la connexion -->
     <div class="col-auto">
       <input *ngIf="displayFormLogin" type="password" class="form-control" id="inputPassword2" placeholder="Email">
     </div>
@@ -9,4 +11,4 @@
       <button  (click) = "connexionDone()" *ngIf="displayBtnLogIn" type="submit" class="btn btn-primary mb-3"> Se connecter </button>
       <button *ngIf="displayBtnLogOut" type="submit" class="btn btn-primary mb-3">Deconnexion</button>
     </div>
-  </form>
+</form>

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'binocular-angular';
+  title = 'binocular-angular'; // titre de l'application 
 }

@@ -1,0 +1,13 @@
+button {
+    margin-top: 0px !important;
+  }
+  .flag {
+    padding-bottom: 4px;
+    width: 21px;
+    height: 21px;
+  }
+  .btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+  }

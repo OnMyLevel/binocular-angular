@@ -12,6 +12,9 @@ import { ContainerComponent } from './components/container/container.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './components/login/login.component';
+import { LangSwitcherComponent } from './lang-switcher/lang-switcher.component';
+import { FileHandlerComponent } from './components/file-handler/file-handler.component';
+import { AddRemoteDnsBtnComponent } from './components/add-remote-dns-btn/add-remote-dns-btn.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { LoginComponent } from './components/login/login.component';
     NavBarComponent,
     FooterComponent,
     ContainerComponent,
-    LoginComponent
+    LoginComponent,
+    LangSwitcherComponent,
+    AddRemoteDnsBtnComponent,
+    FileHandlerComponent
   ],
   imports: [
     BrowserModule,

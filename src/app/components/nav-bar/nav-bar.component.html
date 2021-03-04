@@ -1,21 +1,26 @@
+<!-- Menu de naviguation -->
 <nav class="navbar navbar-dark primary-custom">
     <h1 class="navbar-brand"><i class="fa fa-binoculars"></i> BINOCULARS </h1>
     <div class="col-md-4">
+      <!-- Champ de recherche  -->
       <div class="input-group">
-        <input class="form-control py-2 border-right-0 border" type="search" >
+        <input class="form-control py-2 border-right-0 border" placeholder="Rechercher un remote DMS"type="search" >
         <span class="input-group-append">
           <div class="input-group-text"><i class="fa fa-search"></i></div>
         </span>
       </div>
     </div>
     <div class="inline pull-right btngrp" style="inline-flex">
-    <p>
-        {{ now | date:'MMM d, y, h:mm:ss a'}}
-    </p>
+        <p *ngIf="false">
+            {{ now | date:'MMM d, y, h:mm:ss a'}}
+        </p>
+         <!-- Composant pour le changement de langue  -->
+        <app-lang-switcher></app-lang-switcher>
     </div>
     <div *ngIf="displayBtnConnexion" class="inline pull-right btngrp" style="inline-flex">
       <button (click)="displayLoginComponentMethod()" type="button" class="btn btn-success">Connexion</button>
     </div>
+     <!-- Composant de connexion -->
     <div *ngIf="displayLoginConponent" class="inline pull-right btngrp" style="inline-flex">
         <app-login></app-login>
     </div>
