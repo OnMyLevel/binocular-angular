@@ -29,6 +29,7 @@ import { AddRemoteDnsBtnComponent } from './components/add-remote-dns-btn/add-re
     FileHandlerComponent
   ],
   imports: [
+    Translate
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
