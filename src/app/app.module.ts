@@ -10,11 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { LoginComponent } from './components/login/login.component';
 import { LangSwitcherComponent } from './lang-switcher/lang-switcher.component';
 import { FileHandlerComponent } from './components/file-handler/file-handler.component';
 import { AddRemoteDnsBtnComponent } from './components/add-remote-dns-btn/add-remote-dns-btn.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { environment } from 'src/environnements/environement.mock';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { AddRemoteDnsBtnComponent } from './components/add-remote-dns-btn/add-re
     FileHandlerComponent
   ],
   imports: [
-    Translate
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -37,9 +38,11 @@ import { AddRemoteDnsBtnComponent } from './components/add-remote-dns-btn/add-re
     BrowserModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

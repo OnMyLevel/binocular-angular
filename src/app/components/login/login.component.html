@@ -2,10 +2,10 @@
 <form class="row g-3">
   <!-- Champ pour la connexion -->
     <div class="col-auto">
-      <input *ngIf="displayFormLogin" type="password" class="form-control" id="inputPassword2" placeholder="Email">
+      <input *ngIf="displayFormLogin" (keyup)="setUsername($event)" type="txt" class="form-control" id="inputText" placeholder="Email">
     </div>
     <div class="col-auto">
-      <input *ngIf="displayFormLogin" type="password" class="form-control" id="inputPassword2" placeholder="Password">
+      <input *ngIf="displayFormLogin" (keyup)="setPasword($event)" type="password" class="form-control" id="inputPassword2" placeholder="Password">
     </div>
     <div class="col-auto">
       <button  (click) = "connexionDone()" *ngIf="displayBtnLogIn" type="submit" class="btn btn-primary mb-3"> Se connecter </button>
