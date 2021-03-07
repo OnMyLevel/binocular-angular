@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddRemoteDnsBtnComponent } from './add-remote-dns-btn.component';
+import { RemoteDnsCardComponent } from './remote-dns-card.component';
 
-describe('AddRemoteDnsBtnComponent', () => {
-  let component: AddRemoteDnsBtnComponent;
-  let fixture: ComponentFixture<AddRemoteDnsBtnComponent>;
+describe('RemoteDnsCardComponent', () => {
+  let component: RemoteDnsCardComponent;
+  let fixture: ComponentFixture<RemoteDnsCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddRemoteDnsBtnComponent ]
+      declarations: [ RemoteDnsCardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddRemoteDnsBtnComponent);
+    fixture = TestBed.createComponent(RemoteDnsCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { User } from '@app/models/user';
 import { first } from 'rxjs/operators';
 import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
 
@@ -15,12 +16,16 @@ export class LoginComponent implements OnInit {
   public displayBtnLogOut;
   public canConnect;
   public displayFormLogin;
+
+  @Output()
+  connect: EventEmitter<User> = new EventEmitter<User>();
+  @Output()
+  userConnect:User;
+
   returnUrl: string;
   error = '';
-
-   password;
-   username;
-  @Output() connexionChange = new EventEmitter<boolean>();
+  password;
+  username;
 
   constructor(
         private route: ActivatedRoute,
@@ -37,36 +42,32 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  
   }
 
   public connexionDone(){
-
-    console.log(this.username);
-    console.log(this.password);
-
-
     this.authenticationService.login(this.username,this.password).subscribe(
       res => {
-        console.log(res);
         if(res){
-        this.displayBtnLogOut=true;
-        this.displayBtnLogIn = false;
-        this.displayFormLogin = false;
+          console.log(res)
+          this.displayBtnLogOut=true;
+          this.displayBtnLogIn = false;
+          this.displayFormLogin = false;
+          this.username= res.body[0];
+          this.connect.emit(this.userConnect);
         }
     },
-    error => {
-        this.error = error;
-    });
-    }
+      error => {
+          this.error = error;
+      });
+  }
     
 
-      public setPasword(event:any){
-        this.password = event.target.value;
-      }
+    public setPasword(event:any){
+      this.password = event.target.value;
+    }
 
-      public setUsername(event:any){
-        this.username = event.target.value;
-      }
+    public setUsername(event:any){
+      this.username = event.target.value;
+    }
 
 }

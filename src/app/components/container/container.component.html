@@ -1,3 +1,9 @@
-<div class="alert alert-danger" role="alert">
-    A simple danger alert—check it out!
-  </div>
+<div *ngIf="!userConnect" class="alert alert-danger" role="alert">
+    Vous n'êtes pas connecter !
+</div>
+<div *ngIf="userConnect" class="alert alert-success" role="alert">
+  Vous êtes connecté :)
+</div>
+<div *ngIf="userConnect"> 
+  <app-remote-dns></app-remote-dns>
+</div>

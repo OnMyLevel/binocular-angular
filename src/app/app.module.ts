@@ -11,11 +11,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { LoginComponent } from './components/login/login.component';
-import { LangSwitcherComponent } from './lang-switcher/lang-switcher.component';
 import { FileHandlerComponent } from './components/file-handler/file-handler.component';
-import { AddRemoteDnsBtnComponent } from './components/add-remote-dns-btn/add-remote-dns-btn.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { environment } from 'src/environnements/environement.mock';
+import { LangSwitcherComponent } from './components/lang-switcher/lang-switcher.component';
+import { RemoteDnsCardComponent } from './components/remote-dns-card/remote-dns-card.component';
+import { RemoteDnsComponent } from './components/remote-dns/remote-dns.component';
 
 
 @NgModule({
@@ -26,8 +27,9 @@ import { environment } from 'src/environnements/environement.mock';
     ContainerComponent,
     LoginComponent,
     LangSwitcherComponent,
-    AddRemoteDnsBtnComponent,
-    FileHandlerComponent
+    FileHandlerComponent,
+    RemoteDnsCardComponent,
+    RemoteDnsComponent
   ],
   imports: [
     HttpClientModule,

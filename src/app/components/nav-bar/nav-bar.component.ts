@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { User } from '@app/models/user';
 
 
 
@@ -13,6 +14,11 @@ export class NavBarComponent implements OnInit {
   public displayBtnConnexion;
   public displayLoginConponent;
   public now: Date = new Date();
+
+  @Output()
+  connect: EventEmitter<boolean> = new EventEmitter<boolean>();
+  
+  userConnect:User;
 
   constructor() { 
     setInterval(() => {
@@ -29,6 +35,11 @@ export class NavBarComponent implements OnInit {
   public displayLoginComponentMethod(){
     this.displayLoginConponent = true;
     this.displayBtnConnexion = false;
+  }
+
+  receiveUserConnect(event:any){
+    this.userConnect = event;
+    this.connect.emit(true);
   }
 
 }

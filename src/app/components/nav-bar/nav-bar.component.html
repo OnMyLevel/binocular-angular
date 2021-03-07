@@ -22,6 +22,6 @@
     </div>
      <!-- Composant de connexion -->
     <div *ngIf="displayLoginConponent" class="inline pull-right btngrp" style="inline-flex">
-        <app-login></app-login>
+        <app-login (connect)="receiveUserConnect($event)" ></app-login>
     </div>
   </nav>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './models/user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'binocular-angular'; // titre de l'application 
+
+  userConnect:any;
+  
+  receiveUserConnect(event:any){
+    console.log(event)
+    this.userConnect = event;
+  }
+
 }

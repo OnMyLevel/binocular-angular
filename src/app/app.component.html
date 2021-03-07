@@ -1,8 +1,8 @@
 <!-- Bar de naviguation -->
-<app-nav-bar>
+<app-nav-bar  (connect)="receiveUserConnect($event)" >
 </app-nav-bar>
 <!-- Container principal -->
-<app-container>
+<app-container [userConnect]="userConnect">
 </app-container>
 <!-- Pied de page -->
 <app-footer>  
